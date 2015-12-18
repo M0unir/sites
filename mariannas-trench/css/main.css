@@ -1,0 +1,521 @@
+/* ==========================================================================
+   Mounir Chouladi
+   Mariannas Trench National Monument Website
+   Main Stylesheet
+   ========================================================================== */
+
+
+/*------------------------------------------------------------------
+   [Table of contents]
+
+   1. BODY
+   2. HEADER
+   3. NAVIGATION
+   4. HEADINGS
+   5. HELPER CLASSES
+   6. SIMPLE GRID
+   7. SECTIONS
+   8. LINKS
+   9. IMAGES
+   10. TABLES
+   11. FOOTER
+   -------------------------------------------------------------------*/
+
+   /*------------------------------------------------------------------
+   [Color codes]
+
+   Background:	#FFF (white)
+   Blue Section: #3297f1
+   Red Section: #F06449
+   Content:	#000 ( black)
+   Header h1:	#3297f1 (blue)
+   Header h1 Alterntive:	#FFF (white)
+   Footer:		#F06449 (light red)
+   a (standard):	#F06449 (light red)
+
+   -------------------------------------------------------------------*/
+
+
+   /* 1. BODY  */
+
+   body {
+       background-color: #FFF;
+       font-family: "Roboto", "Open Sans", Arial, sans-serif ;
+       font-size: 18px;
+       line-height: 1.5em;
+       margin: 0;
+   }
+
+   .container {
+       width: 80%;
+       margin: 0 auto;
+   }
+   .fullwidth-container {
+       width: 100%;
+       margin: 0 auto;
+       padding: 0;
+   }
+
+   .container:after, .fullwidth-container:after {
+       content: "";
+       display: table;
+       clear: both;
+   }
+
+   /* 2. HEADINGS */
+
+   h1, h2, h3, h4, h5, h6 {
+       color: #1d2127;
+       font-weight: 200;
+       margin: 0;
+       font-family: "Roboto Slab", serif;
+
+   }
+   h1 {
+       font-size: 2.2em;
+       font-weight: 300;
+       line-height: 42px;
+       margin: 0 0 32px 0;
+   }
+   h2 {
+       font-size: 2.2em;
+       font-weight: 300;
+       line-height: 42px;
+       margin: 0 0 22px 0;
+   }
+   h3 {
+       font-size: 1.8em;
+       font-weight: 400;
+       letter-spacing: normal;
+       line-height: 24px;
+       margin-bottom: 33px;
+       text-transform: uppercase;
+   }
+   h4 {
+       font-size: 1.4em;
+       font-weight: 400;
+       letter-spacing: normal;
+       line-height: 27px;
+       margin: 0 0 14px 0;
+   }
+   h1.big {
+       font-size: 4.2em;
+       line-height: 54px;
+   }
+
+
+   /* 3. HEADER */
+
+   .site-header {
+       background: #3397F2;
+       overflow: auto;
+   }
+
+   header h1.logo {
+       display: inline-block;
+       margin: 0;
+       padding: 0.2em 0em 0em 0.1em;
+       font-weight: 700;
+       color: #FFF;
+       font-size: 1.8em;
+   }
+   header h1.logo img {
+       position: relative;
+       color: transparent;
+   }
+
+   /* 4. NAVIGATION */
+
+   .main-nav {
+       font-family: "Roboto Slab", serif;
+       display: inline-block;
+       float: right;
+   }
+   .main-nav ul {
+       margin: 0px;
+   }
+   .main-nav li {
+       display: inline-block;
+       margin: 5px 0;
+       padding: 0.3em;
+   }
+   .main-nav li a {
+       color: #fff;
+       text-decoration: none;
+       padding: 1em 1.2em;
+       text-transform: capitalize;
+       font-family: "Roboto Slab", sans-serif;
+       font-size: 1.2em;
+       display: block;
+       padding: 4px 16px;
+       border: 1px transparent solid
+   }
+   .main-nav li a:hover {
+       border: 1px solid;
+       border-radius: 3px;
+       text-decoration: none
+   }
+   .main-nav li.active {}
+   .main-nav li.active a {
+       background-color: #fff !important;
+       color: #789;
+       border-radius: 3px;
+       border: 1px solid #FFF;
+   }
+
+
+
+
+   /* 5. HELPER CLASSES  */
+
+   hr {
+       display: block;
+       height: 1px;
+       border: 0;
+       border-top: 1px solid #ccc;
+       margin: 1em 0;
+       padding: 0;
+   }
+
+   .center {
+       text-align: center;
+   }
+   .push-right {
+       text-align: right;
+   }
+   .push-left {
+       text-align: left;
+   }
+   .pull-right {
+       float: right;
+   }
+   .pull-left {
+       float: left;
+   }
+   .no-padding {
+       padding: 0 !important;
+   }
+   .no-margins {
+       margin: 0 auto !important;
+   }
+
+   hr.transparent {
+       border-top: 1px solid transparent;
+   }
+   hr.big {
+       margin: 1.5em auto;
+   }
+   hr.short {
+       border-top: 1px solid transparent;
+   }
+   .dark {
+       color: #000;
+   }
+   .light {
+       color: #FFF;
+   }
+   .lighter {
+       color: #EDE6E3;
+   }
+   .grey {
+       color: #AAC6E1;
+   }
+   .text-color-secondary {
+       color: #3297f1;
+   }
+
+   .alternative-font {
+       font-family: 'Roboto Slab', serif !important;
+   }
+
+   /* 6. SIMPLE GRID */
+
+   *, *:after, *:before {
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+   }
+   [class*='col-'] {
+       float: left;
+   }
+   [class*='col-'] {
+       padding-right: 20px;
+   }
+   [class*='col-']:last-of-type {
+       padding-right: 0;
+   }
+   .col-2-3 {
+       width: 66.66%;
+   }
+   .col-1-3 {
+       width: 33.33%;
+   }
+   .col-1-2 {
+       width: 50%;
+   }
+
+   /* 7. SECTIONS */
+
+   section.home {
+       background-image: url(../img/expl0039_noaa.jpg);
+   }
+   section.wildlife {
+       background-image: url(../img/clams.png);
+   }
+   section.science {
+       background-image: url(../img/tubeworms.jpg);
+   }
+   section.future {
+       background-image: url(../img/Champagne_vent_white_smokers.jpg);
+   }
+
+   .section {
+       position: relative;
+       padding: 5em 0em;
+       margin: 0 auto;
+   }
+   .section-short {
+       padding: 5em 0em;
+   }
+   .section-blue {
+       background-color: #BFD7F0;
+   }
+
+   .section-overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: 0;
+       background-color: rgba(0, 0, 0, 0.5);
+       /*dim the background*/
+   }
+   .section h1 {
+       font-family: "Roboto Slab", serif;
+       font-weight: 700;
+       font-size: 2em;
+   }
+   .section p {
+       /*font-family: Montserrat, serif;*/
+       font-weight: 300;
+       font-size: 1.2em;
+   }
+   .section-home {
+       position: relative;
+       background-color: rgba(0, 0, 0, 0);
+       background-size: cover;
+       height: 500px;
+       opacity: 1;
+       z-index: 0;
+       background-position: 50% 50%;
+       background-repeat: no-repeat no-repeat;
+   }
+
+   .section-home h1 {
+       font-family: "Roboto Slab", serif;
+       font-weight: 700;
+       font-size: 4em;
+   }
+   .section-home p {
+       font-family: "Roboto ", sans-serif;
+       font-weight: 400;
+       font-size: 1.1em;
+       line-height: 1.2em;
+   }
+   .section-home p.small {
+       position: absolute;
+       bottom: 0;
+       font-weight: 400;
+       font-size: 0.8em;
+       line-height: 1em;
+       color: rgba(255, 255, 255, 0.8);
+   }
+   .section .content-boxed {
+       padding: 2em;
+   }
+   .section-disclaimer {
+       position: relative;
+       background-color: #A2D729;
+       margin: 0 auto;
+       padding: 2em;
+   }
+
+   .content-box {
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       z-index: 3;
+   }
+   .content-boxed-red {
+       border: 5px solid #F06449;
+       padding: 1em;
+       width: 100%;
+   }
+
+
+    /* 8. LINKS */
+    a, a:visited, a:active {
+        color: #F06449;
+        text-decoration: none;
+    }
+
+    a:hover, a:focus {
+        text-decoration: underline;
+    }
+
+    /* 9. IMAGES */
+
+    figcaption {
+        margin-top: 5px;
+        font-size: 0.8em;
+        line-height: 1.1em;
+        opacity: 0.8;
+    }
+
+    div > .img {
+      width: 100% !important;
+    }
+
+    /* 10. TABLES */
+
+    table {
+        width: 100%;
+    }
+    th[scope=col] {
+        background: #A2D729;
+    }
+     td {
+        border-collapse: collapse;
+        color: #555;
+        padding: .4em;
+        border: 1px solid #ccc;
+    }
+    table caption {
+        margin-bottom: 1.2em;
+        font-size: 1.4em;
+        */
+    }
+
+    tr:hover {
+        background: #F8F7F7;
+    }
+
+
+    tfoot {
+        color: #999;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    thead tr th {
+        font-size: 1em;
+        padding: 1em;
+    }
+    thead tr th {
+        padding: 1em;
+    }
+    tr td:first-child {
+        font-size: 1em;
+        width: 250px;
+    }
+    tr td:last-child {
+        font-size: 1em;
+        width: 250px;
+    }
+
+
+    /* 11. FOOTER */
+
+    .section-footer {
+        background: #F06449;
+        padding: 3em 2em;
+    }
+    .section-footer p a {
+        opacity: 1;
+        text-decoration: none;
+        color: #A2D729 !important;
+        font-weight: bold;
+    }
+    .section-footer p a:hover {
+        opacity: 0.8;
+        text-decoration: none;
+        color: #A2D729;
+    }
+
+    .footer-nav ul {
+        font-family: "Roboto Slab", serif;
+        text-decoration: none;
+        padding: 0.3em 0em;
+    }
+    .footer-nav li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em 1.2em;
+        text-transform: capitalize;
+        font-family: "Roboto Slab", sans-serif;
+        font-size: 1.2em;
+        display: block;
+        padding: 4px 16px;
+        border: 1px transparent solid;
+        opacity: 0.7;
+    }
+    .footer-nav li a:hover {
+        background-color: #A2D729;
+        opacity: 1;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #F06449;
+    }
+    .footer-nav {
+        display: inline-block;
+    }
+    .footer-nav li {
+        list-style: none;
+        display: inline-block;
+    }
+
+/* ==========================================================================
+   Media Queries (Experimental)
+   ========================================================================== */
+
+@media only screen and (max-width: 70em) {
+    .container {
+        width: 100%;
+        padding: 1em;
+    }
+    .content-box h1 {
+        padding: 1em;
+        font-size: 3em;
+        line-height: 1.1em;
+    }
+    .header-container {
+        width: 90%;
+        /*text-align: center;*/
+    }
+    header h1.logo, .header-container ul {
+        padding-left: 0px;
+        margin: 0.3em auto;
+    }
+    .main-nav {
+        padding-right: 0em;
+        float: none;
+    }
+    .main-nav li {
+        padding: 0em;
+        margin: 0 auto;
+    }
+    .main-nav li a {
+        display: inline-block;
+        margin: 10px auto;
+        /*border-right: 1px solid #fff;*/
+        padding: 0.1em 0.2em;
+        margin: 0.1em auto;
+    }
+    .section {
+        padding: 6em 0em;
+    }
+    .section .content-boxed {
+        padding: 0.2em 1em;
+    }
+}
